@@ -36,7 +36,7 @@ public class ArticleDO {
      * 文章状态
      * @see cn.lvshengyi.onelvshengyi.constant.ArticleStatusEnum
      */
-    private Byte status;
+    private Integer status;
 
     /**
      * 正文内容
