@@ -6,7 +6,9 @@ import cn.lvshengyi.onelvshengyi.entity.dto.ArticleReleaseDTO;
 import cn.lvshengyi.onelvshengyi.entity.po.ArticlePO;
 import cn.lvshengyi.onelvshengyi.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ArticleServiceImpl implements ArticleService {
 
     @Autowired

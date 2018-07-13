@@ -1,8 +1,11 @@
 package cn.lvshengyi.onelvshengyi.entity.dto;
 
+import lombok.Data;
+
 /**
  * @author LvShengyI
  */
+@Data
 public class UserSignInDTO {
 
     /**

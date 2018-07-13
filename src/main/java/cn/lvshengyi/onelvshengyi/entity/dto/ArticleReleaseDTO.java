@@ -1,5 +1,8 @@
 package cn.lvshengyi.onelvshengyi.entity.dto;
 
+import lombok.Data;
+
+@Data
 public class ArticleReleaseDTO {
 
     /**
