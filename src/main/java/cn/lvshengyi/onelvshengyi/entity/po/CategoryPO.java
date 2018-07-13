@@ -1,6 +1,6 @@
 package cn.lvshengyi.onelvshengyi.entity.po;
 
-import cn.lvshengyi.onelvshengyi.entity.dto.CategoryAddDTO;
+import cn.lvshengyi.onelvshengyi.entity.dto.CategoryDTO;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,10 +35,10 @@ public class CategoryPO {
      */
     private String intro;
 
-    public static CategoryPO buildByCategoryAddDTO(CategoryAddDTO categoryAddDTO){
+    public static CategoryPO buildByCategoryDTO(CategoryDTO categoryDTO){
         CategoryPO category = new CategoryPO();
 
-        BeanUtils.copyProperties(categoryAddDTO, category);
+        BeanUtils.copyProperties(categoryDTO, category);
 
         return category;
     }

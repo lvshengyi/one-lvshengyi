@@ -3,7 +3,7 @@ package cn.lvshengyi.onelvshengyi.entity.dto;
 import lombok.Data;
 
 @Data
-public class CategoryAddDTO {
+public class CategoryDTO {
 
     /**
      * 分类颜色码，使用16进制颜色

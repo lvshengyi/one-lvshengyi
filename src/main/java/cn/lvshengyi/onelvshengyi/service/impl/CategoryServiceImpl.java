@@ -1,7 +1,7 @@
 package cn.lvshengyi.onelvshengyi.service.impl;
 
 import cn.lvshengyi.onelvshengyi.dao.CategoryDAO;
-import cn.lvshengyi.onelvshengyi.entity.dto.CategoryAddDTO;
+import cn.lvshengyi.onelvshengyi.entity.dto.CategoryDTO;
 import cn.lvshengyi.onelvshengyi.entity.po.CategoryPO;
 import cn.lvshengyi.onelvshengyi.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,8 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Integer add(CategoryAddDTO categoryAddDTO) {
-        return categoryDAO.add(CategoryPO.buildByCategoryAddDTO(categoryAddDTO));
+    public Integer add(CategoryDTO categoryDTO) {
+        return categoryDAO.add(CategoryPO.buildByCategoryDTO(categoryDTO));
     }
 
     @Override

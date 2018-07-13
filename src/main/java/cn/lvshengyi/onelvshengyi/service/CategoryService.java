@@ -1,6 +1,6 @@
 package cn.lvshengyi.onelvshengyi.service;
 
-import cn.lvshengyi.onelvshengyi.entity.dto.CategoryAddDTO;
+import cn.lvshengyi.onelvshengyi.entity.dto.CategoryDTO;
 import cn.lvshengyi.onelvshengyi.entity.po.CategoryPO;
 
 public interface CategoryService {
@@ -16,10 +16,10 @@ public interface CategoryService {
     /**
      * 添加分类
      *
-     * @param categoryAddDTO
+     * @param categoryDTO
      * @return
      */
-    Integer add(CategoryAddDTO categoryAddDTO);
+    Integer add(CategoryDTO categoryDTO);
 
     /**
      * 根据id删除分类

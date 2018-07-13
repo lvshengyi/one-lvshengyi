@@ -1,16 +1,16 @@
 package cn.lvshengyi.onelvshengyi.service;
 
-import cn.lvshengyi.onelvshengyi.entity.dto.ArticleReleaseDTO;
+import cn.lvshengyi.onelvshengyi.entity.dto.ArticleDTO;
 
 public interface ArticleService {
 
     /**
      * 添加文章
      *
-     * @param articleReleaseDTO
+     * @param articleDTO
      * @return
      */
-    Integer add(ArticleReleaseDTO articleReleaseDTO);
+    Integer add(ArticleDTO articleDTO);
 
     /**
      * 根据文章id隐藏文章

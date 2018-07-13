@@ -1,13 +1,19 @@
 package cn.lvshengyi.onelvshengyi.entity.po;
 
+import cn.lvshengyi.onelvshengyi.constant.MessageStatusEnum;
+import cn.lvshengyi.onelvshengyi.entity.dto.MessageDTO;
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.beans.BeanUtils;
 
 /**
  * @author LvShengyI
  */
 @Data
 @ToString
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class MessagePO {
 
     /**
@@ -45,4 +51,13 @@ public class MessagePO {
      * @see cn.lvshengyi.onelvshengyi.constant.MessageStatusEnum
      */
     private Integer status;
+
+    public static MessagePO buildByMessageDTO(MessageDTO messageDTO){
+        MessagePO message = new MessagePO();
+
+        BeanUtils.copyProperties(messageDTO, message);
+        message.setStatus(MessageStatusEnum.UNREAD.getCode());
+
+        return message;
+    }
 }

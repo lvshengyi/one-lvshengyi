@@ -1,6 +1,6 @@
 package cn.lvshengyi.onelvshengyi.entity.po;
 
-import cn.lvshengyi.onelvshengyi.entity.dto.ArticleReleaseDTO;
+import cn.lvshengyi.onelvshengyi.entity.dto.ArticleDTO;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -51,10 +51,10 @@ public class ArticlePO {
      */
     private String content;
 
-    public static ArticlePO buildByArticleReleaseDTO(ArticleReleaseDTO articleReleaseDTO){
+    public static ArticlePO buildByArticleDTO(ArticleDTO articleDTO){
         ArticlePO article = new ArticlePO();
 
-        BeanUtils.copyProperties(articleReleaseDTO, article);
+        BeanUtils.copyProperties(articleDTO, article);
 
         return article;
     }
