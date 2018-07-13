@@ -1,6 +1,6 @@
 package cn.lvshengyi.onelvshengyi.interceptor;
 
-import cn.lvshengyi.onelvshengyi.entity.UserDO;
+import cn.lvshengyi.onelvshengyi.entity.po.UserPO;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +17,7 @@ public class BackInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        UserDO user = (UserDO) request.getSession().getAttribute("user");
+        UserPO user = (UserPO) request.getSession().getAttribute("user");
 
         return Objects.nonNull(user)
                 && user.getUsername().equals(username) && user.getPassword().equals(password);

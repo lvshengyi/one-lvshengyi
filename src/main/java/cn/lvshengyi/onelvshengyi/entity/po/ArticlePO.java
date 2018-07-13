@@ -1,12 +1,14 @@
-package cn.lvshengyi.onelvshengyi.entity;
+package cn.lvshengyi.onelvshengyi.entity.po;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * @author LvShengyI
  */
 @Data
-public class ArticleDO {
+@ToString
+public class ArticlePO {
     /**
      * 文章id
      */

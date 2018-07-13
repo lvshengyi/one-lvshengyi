@@ -13,3 +13,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+mybatis:
+  configuration:
+    mapUnderscoreToCamelCase: true
