@@ -1,14 +1,20 @@
 package cn.lvshengyi.onelvshengyi.entity.po;
 
+import cn.lvshengyi.onelvshengyi.entity.dto.ArticleReleaseDTO;
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.beans.BeanUtils;
 
 /**
  * @author LvShengyI
  */
 @Data
 @ToString
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ArticlePO {
+
     /**
      * 文章id
      */
@@ -44,4 +50,13 @@ public class ArticlePO {
      * 正文内容
      */
     private String content;
+
+    public static ArticlePO buildByArticleReleaseDTO(ArticleReleaseDTO articleReleaseDTO){
+        ArticlePO article = new ArticlePO();
+
+        BeanUtils.copyProperties(articleReleaseDTO, article);
+
+        return article;
+    }
+
 }
