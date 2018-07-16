@@ -14,7 +14,7 @@ import org.springframework.beans.BeanUtils;
 @Data
 @ToString
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class Message {
+public class MessagePO {
 
     /**
      * 私信id
@@ -52,12 +52,12 @@ public class Message {
      */
     private Integer status;
 
-    public static Message buildByMessageDTO(MessageDTO messageDTO){
-        Message message = new Message();
+    public static MessagePO buildByMessageDTO(MessageDTO messageDTO){
+        MessagePO messagePO = new MessagePO();
 
-        BeanUtils.copyProperties(messageDTO, message);
-        message.setStatus(MessageStatusEnum.UNREAD.getCode());
+        BeanUtils.copyProperties(messageDTO, messagePO);
+        messagePO.setStatus(MessageStatusEnum.UNREAD.getCode());
 
-        return message;
+        return messagePO;
     }
 }

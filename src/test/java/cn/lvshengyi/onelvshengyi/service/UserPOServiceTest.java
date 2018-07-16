@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * @author LvShengyI
  */
-public class UserServiceTest extends BaseTest {
+public class UserPOServiceTest extends BaseTest {
 
     @Autowired
     private UserService userService;

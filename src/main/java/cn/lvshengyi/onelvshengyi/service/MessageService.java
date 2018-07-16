@@ -1,7 +1,7 @@
 package cn.lvshengyi.onelvshengyi.service;
 
 import cn.lvshengyi.onelvshengyi.entity.dto.MessageDTO;
-import cn.lvshengyi.onelvshengyi.entity.po.Message;
+import cn.lvshengyi.onelvshengyi.entity.po.MessagePO;
 
 public interface MessageService {
 
@@ -11,7 +11,7 @@ public interface MessageService {
      * @param id
      * @return
      */
-    Message findById(Integer id);
+    MessagePO findById(Integer id);
 
     /**
      * 添加数据

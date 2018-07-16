@@ -1,6 +1,6 @@
 package cn.lvshengyi.onelvshengyi.dao;
 
-import cn.lvshengyi.onelvshengyi.entity.po.Message;
+import cn.lvshengyi.onelvshengyi.entity.po.MessagePO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -16,16 +16,16 @@ public interface MessageDAO {
      * @return
      */
     @Select("SELECT * FROM message WHERE id = #{id}")
-    Message findById(Integer id);
+    MessagePO findById(Integer id);
 
     /**
      * 插入数据
      *
-     * @param message
+     * @param messagePO
      * @return
      */
-    @Insert("INSERT INTO message(sender_id, receiver_id, content, status) VALUES(#{senderId}, #{receiverId}, #{content}, #{status})")
-    Integer add(Message message);
+    @Insert("INSERT INTO messagePO(sender_id, receiver_id, content, status) VALUES(#{senderId}, #{receiverId}, #{content}, #{status})")
+    Integer add(MessagePO messagePO);
 
     /**
      * 更新状态

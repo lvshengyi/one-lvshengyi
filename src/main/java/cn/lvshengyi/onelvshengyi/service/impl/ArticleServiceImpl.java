@@ -3,7 +3,7 @@ package cn.lvshengyi.onelvshengyi.service.impl;
 import cn.lvshengyi.onelvshengyi.constant.ArticleStatusEnum;
 import cn.lvshengyi.onelvshengyi.dao.ArticleDAO;
 import cn.lvshengyi.onelvshengyi.entity.dto.ArticleDTO;
-import cn.lvshengyi.onelvshengyi.entity.po.Article;
+import cn.lvshengyi.onelvshengyi.entity.po.ArticlePO;
 import cn.lvshengyi.onelvshengyi.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Integer add(ArticleDTO articleDTO) {
-        return articleDAO.add(Article.buildByArticleDTO(articleDTO));
+        return articleDAO.add(ArticlePO.buildByArticleDTO(articleDTO));
     }
 
     @Override

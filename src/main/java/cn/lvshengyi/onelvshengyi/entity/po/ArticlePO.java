@@ -13,7 +13,7 @@ import org.springframework.beans.BeanUtils;
 @Data
 @ToString
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class Article {
+public class ArticlePO {
 
     /**
      * 文章id
@@ -51,12 +51,12 @@ public class Article {
      */
     private String content;
 
-    public static Article buildByArticleDTO(ArticleDTO articleDTO){
-        Article article = new Article();
+    public static ArticlePO buildByArticleDTO(ArticleDTO articleDTO){
+        ArticlePO articlePO = new ArticlePO();
 
-        BeanUtils.copyProperties(articleDTO, article);
+        BeanUtils.copyProperties(articleDTO, articlePO);
 
-        return article;
+        return articlePO;
     }
 
 }

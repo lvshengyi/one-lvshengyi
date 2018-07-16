@@ -1,7 +1,7 @@
 package cn.lvshengyi.onelvshengyi.dao;
 
 import cn.lvshengyi.onelvshengyi.entity.dto.UserSignInDTO;
-import cn.lvshengyi.onelvshengyi.entity.po.User;
+import cn.lvshengyi.onelvshengyi.entity.po.UserPO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
@@ -19,7 +19,7 @@ public interface UserDAO {
      * @return
      */
     @Select("SELECT * FROM user WHERE id = #{id}")
-    User findById(Integer id);
+    UserPO findById(Integer id);
 
     /**
      * 根据用户名获取数据
@@ -28,7 +28,7 @@ public interface UserDAO {
      * @return
      */
     @Select("SELECT * FROM user WHERE username = #{username}")
-    User findByUsername(String username);
+    UserPO findByUsername(String username);
 
     /**
      * 根据用户名与密码获取数据
@@ -37,14 +37,14 @@ public interface UserDAO {
      * @return
      */
     @Select("SELECT * FROM user WHERE username = #{username} AND password = #{password}")
-    User findByUserSignInDTO(UserSignInDTO userSignInDTO);
+    UserPO findByUserSignInDTO(UserSignInDTO userSignInDTO);
 
     /**
      * 插入用户数据
      *
-     * @param user
+     * @param userPO
      * @return
      */
-    @Insert("INSERT INTO user(username, password, nickname, e_mail, status, type) VALUES(#{username}, #{password}, #{nickname}, #{eMail}, #{status}, #{type})")
-    Integer add(User user);
+    @Insert("INSERT INTO userPO(username, password, nickname, e_mail, status, type) VALUES(#{username}, #{password}, #{nickname}, #{eMail}, #{status}, #{type})")
+    Integer add(UserPO userPO);
 }

@@ -1,6 +1,6 @@
 package cn.lvshengyi.onelvshengyi.dao;
 
-import cn.lvshengyi.onelvshengyi.entity.po.Article;
+import cn.lvshengyi.onelvshengyi.entity.po.ArticlePO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -17,16 +17,16 @@ public interface ArticleDAO {
      * @return
      */
     @Select("SELECT article WHERE id = #{id}")
-    Article findById(Integer articleId);
+    ArticlePO findById(Integer articleId);
 
     /**
      * 插入数据
      *
-     * @param article
+     * @param articlePO
      * @return
      */
-    @Insert("INSERT INTO article(category_id, title, keyword, status, content) VALUES(#{categoryId}, #{title}, #{keyword}, #{status}, #{content})")
-    Integer add(Article article);
+    @Insert("INSERT INTO articlePO(category_id, title, keyword, status, content) VALUES(#{categoryId}, #{title}, #{keyword}, #{status}, #{content})")
+    Integer add(ArticlePO articlePO);
 
     /**
      * 更新数据
@@ -34,7 +34,7 @@ public interface ArticleDAO {
      * @param articlePO
      * @return
      */
-    @Update("UPDATE article SET category_id = #{categoryId}, title = #{title}, keyword = #{keyword}, status = #{status}, content = #{content} WHERE id = #{id}")
+    @Update("UPDATE articlePO SET category_id = #{categoryId}, title = #{title}, keyword = #{keyword}, status = #{status}, content = #{content} WHERE id = #{id}")
     Integer update(ArticlePO articlePO);
 
     /**

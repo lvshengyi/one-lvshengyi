@@ -13,7 +13,7 @@ import org.springframework.beans.BeanUtils;
 @Data
 @ToString
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class Category {
+public class CategoryPO {
 
     /**
      * 分类id
@@ -35,11 +35,11 @@ public class Category {
      */
     private String intro;
 
-    public static Category buildByCategoryDTO(CategoryDTO categoryDTO){
-        Category category = new Category();
+    public static CategoryPO buildByCategoryDTO(CategoryDTO categoryDTO){
+        CategoryPO categoryPO = new CategoryPO();
 
-        BeanUtils.copyProperties(categoryDTO, category);
+        BeanUtils.copyProperties(categoryDTO, categoryPO);
 
-        return category;
+        return categoryPO;
     }
 }
