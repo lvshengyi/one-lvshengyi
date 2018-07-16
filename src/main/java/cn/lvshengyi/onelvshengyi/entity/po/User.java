@@ -12,7 +12,7 @@ import org.springframework.beans.BeanUtils;
  */
 @Data
 @ToString
-public class UserPO {
+public class User {
 
     /**
      * 用户id
@@ -51,7 +51,7 @@ public class UserPO {
      */
     private Integer type;
 
-    private UserPO(){}
+    private User(){}
 
     /**
      * 建造标准普通用户
@@ -59,8 +59,8 @@ public class UserPO {
      * @param userSignUp
      * @return
      */
-    public static UserPO buildNormal(UserSignUpDTO userSignUp){
-        UserPO signUpUser = new UserPO();
+    public static User buildNormal(UserSignUpDTO userSignUp){
+        User signUpUser = new User();
         BeanUtils.copyProperties(userSignUp, signUpUser);
 
         signUpUser.setStatus(UserStatusEnum.NORMAL.getCode());
