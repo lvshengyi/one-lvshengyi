@@ -6,6 +6,11 @@ import lombok.Data;
 public class ArticleDTO {
 
     /**
+     * 文章id
+     */
+    private Integer id;
+
+    /**
      * 分类id
      */
     private Integer categoryId;

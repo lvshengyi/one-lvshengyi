@@ -15,8 +15,18 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleDAO articleDAO;
 
     @Override
+    public ArticlePO findById(Integer id) {
+        return articleDAO.findById(id);
+    }
+
+    @Override
     public Integer add(ArticleDTO articleDTO) {
         return articleDAO.add(ArticlePO.buildByArticleDTO(articleDTO));
+    }
+
+    @Override
+    public Integer update(ArticleDTO articleDTO) {
+        return articleDAO.update(ArticlePO.buildByArticleDTO(articleDTO));
     }
 
     @Override

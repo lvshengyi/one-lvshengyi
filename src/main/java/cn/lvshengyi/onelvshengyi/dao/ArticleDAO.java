@@ -5,7 +5,9 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ArticleDAO {
 
     /**
@@ -25,6 +27,15 @@ public interface ArticleDAO {
      */
     @Insert("INSERT INTO article(category_id, title, keyword, status, content) VALUES(#{categoryId}, #{title}, #{keyword}, #{status}, #{content})")
     Integer add(ArticlePO articlePO);
+
+    /**
+     * 更新数据
+     *
+     * @param articlePO
+     * @return
+     */
+    @Update("UPDATE article SET category_id = #{categoryId}, title = #{title}, keyword = #{keyword}, status = #{status}, content = #{content} WHERE id = #{id}")
+    Integer update(ArticlePO articlePO);
 
     /**
      * 根据id更新文章状态
