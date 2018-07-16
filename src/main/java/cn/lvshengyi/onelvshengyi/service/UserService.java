@@ -2,7 +2,7 @@ package cn.lvshengyi.onelvshengyi.service;
 
 import cn.lvshengyi.onelvshengyi.entity.dto.UserSignUpDTO;
 import cn.lvshengyi.onelvshengyi.entity.dto.UserSignInDTO;
-import cn.lvshengyi.onelvshengyi.entity.po.UserPO;
+import cn.lvshengyi.onelvshengyi.entity.po.User;
 
 /**
  * @author LvShengyI
@@ -15,7 +15,7 @@ public interface UserService {
      * @param id
      * @return
      */
-    UserPO findById(Integer id);
+    User findById(Integer id);
 
     /**
      * 注册

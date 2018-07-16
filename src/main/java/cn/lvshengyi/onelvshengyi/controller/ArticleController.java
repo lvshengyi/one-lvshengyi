@@ -1,6 +1,6 @@
 package cn.lvshengyi.onelvshengyi.controller;
 
-import cn.lvshengyi.onelvshengyi.entity.po.ArticlePO;
+import cn.lvshengyi.onelvshengyi.entity.po.Article;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,7 @@ public class ArticleController {
 
     @ApiOperation("获取所有文章")
     @GetMapping
-    public List<ArticlePO> list(){
+    public List<Article> list(){
         return null;
     }
 }

@@ -1,6 +1,6 @@
 package cn.lvshengyi.onelvshengyi.dao;
 
-import cn.lvshengyi.onelvshengyi.entity.po.ArticlePO;
+import cn.lvshengyi.onelvshengyi.entity.po.Article;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -15,16 +15,16 @@ public interface ArticleDAO {
      * @return
      */
     @Select("SELECT article WHERE id = #{id}")
-    ArticlePO findById(Integer articleId);
+    Article findById(Integer articleId);
 
     /**
      * 插入数据
      *
-     * @param articlePO
+     * @param article
      * @return
      */
     @Insert("INSERT INTO article(category_id, title, keyword, status, content) VALUES(#{categoryId}, #{title}, #{keyword}, #{status}, #{content})")
-    Integer add(ArticlePO articlePO);
+    Integer add(Article article);
 
     /**
      * 根据id更新文章状态

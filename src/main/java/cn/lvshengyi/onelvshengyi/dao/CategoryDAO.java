@@ -1,6 +1,6 @@
 package cn.lvshengyi.onelvshengyi.dao;
 
-import cn.lvshengyi.onelvshengyi.entity.po.CategoryPO;
+import cn.lvshengyi.onelvshengyi.entity.po.Category;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
@@ -16,16 +16,16 @@ public interface CategoryDAO {
      * @return
      */
     @Select("SELECT * FROM category WHERE id = #{id}")
-    CategoryPO findById(Integer id);
+    Category findById(Integer id);
 
     /**
      * 添加数据
      *
-     * @param categoryPO
+     * @param category
      * @return
      */
     @Insert("INSERT INTO category(color_code, name, intro) VALUES(#{colorCode}, #{name}, #{intro}")
-    Integer add(CategoryPO categoryPO);
+    Integer add(Category category);
 
     /**
      * 根据id删除数据

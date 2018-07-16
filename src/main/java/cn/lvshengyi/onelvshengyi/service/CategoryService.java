@@ -1,7 +1,7 @@
 package cn.lvshengyi.onelvshengyi.service;
 
 import cn.lvshengyi.onelvshengyi.entity.dto.CategoryDTO;
-import cn.lvshengyi.onelvshengyi.entity.po.CategoryPO;
+import cn.lvshengyi.onelvshengyi.entity.po.Category;
 
 public interface CategoryService {
 
@@ -11,7 +11,7 @@ public interface CategoryService {
      * @param categoryId
      * @return
      */
-    CategoryPO findById(Integer categoryId);
+    Category findById(Integer categoryId);
 
     /**
      * 添加分类
